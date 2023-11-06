@@ -1,7 +1,8 @@
 import requests
 
 
-url = 'http://localhost:9696/predict'
+#url = 'http://localhost:9696/predict' # localhost test
+url = 'https://water-potability-2rtrkbrwna-uc.a.run.app/predict' # GCP deployment
 
 water_data = {
     "ph": 8.860324,

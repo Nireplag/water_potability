@@ -56,6 +56,8 @@ model = xgb.XGBClassifier(n_estimators = 100,
                           learning_rate = 0.2, 
                           random_state = 7)
 
+model.fit(x_train, y_train)
+
 # save model as pickle file
 with open('model.bin', 'wb') as f_out:
     pickle.dump(model, f_out)

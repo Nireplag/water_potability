@@ -33,6 +33,6 @@ water_data = {
 }
 
 
-response = requests.post(url, json=water_data)#.json()
+response = requests.post(url, json=water_data).json()
 print(response) # expect output 1
 

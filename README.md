@@ -81,4 +81,27 @@ After we will deploy the imageb to the docker hub using the following command:
 
 ### Deployment to Google Cloud Platform
 
-We assume 
+We assume you already have a GCP account. 
+
+Search for Cloud run service and click create service.
+
+Populate the needed information as following: 
+
+- Container image URL: <your_username>/water-potability-flask
+- Service Name: water-potability
+- Ingress Control: All
+- Authentication: Allow unauthenticated invocations
+- Container port: 9696
+
+It is also recommneded to change the region and Autoscaling feautres as you see fit.
+At end of deployment you will have the following:
+![image](https://github.com/Nireplag/water_potability/assets/70478646/2abdb2ab-a700-406c-a2bc-8027918236a0)
+
+### Testing Cloud deployment
+
+The service is already running under the url [https://water-potability-2rtrkbrwna-uc.a.run.app](https://water-potability-2rtrkbrwna-uc.a.run.app).
+
+This url can be used into the predict_test.py file with an additional '/predict'. This is already availabe there and the file can be run as the local test, just changing the url commented.
+
+As result of the execution, we will get a json with the payload being passed and the potability probability
+

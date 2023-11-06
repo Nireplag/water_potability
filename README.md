@@ -49,11 +49,36 @@ This step is not mandatory since we already have the file model available. You c
 ### Run webservice locally 
 
 It is possible to run the webservice locally using the following command: ``` python3 predict.py```.
+
 In order to locally test the service, uncomment the url from the file predict_test.py for localhost, save it and run the file predict_test.py from a differnt enviroment. Trying to use the same from pipenv will cause an error since it is already running the webservice.
+
 In order to stop the webservice send the command: ``` CTRL + c```.
 
 ### Creating a docker image and save it to docker hub
 
 In order to create a docker image, we assume you already have a docker installed in your computer.
-To build the image execute the following command into the directory with Dockerfile:
-``` python3 train.py```
+
+To build the image locally execute the following command into the directory with Dockerfile:
+
+``` docker build -t water-potability-flask .```
+
+Create a docker hub account. This can be easily done using your github account. 
+
+Once logged, create a repository as public with same name as your already created docker image. 
+
+Next a access token need to be created as following:
+
+- Click your username at right top corner,
+- Enter Account setting,
+- Select Security,
+- Click on "Create Access token",
+- Populate name and leave it as "Read, write, Delete",
+- run the steps prompted to connect your environment to the docker hub.
+
+After we will deploy the imageb to the docker hub using the following command:
+
+``` docker push <your_username>/water-potability-flask```
+
+### Deployment to Google Cloud Platform
+
+We assume 

@@ -103,5 +103,10 @@ The service is already running under the url [https://water-potability-2rtrkbrwn
 
 This url can be used into the predict_test.py file with an additional '/predict'. This is already availabe there and the file can be run as the local test, just changing the url commented.
 
-As result of the execution, we will get a json with the payload being passed and the potability probability
+As result of the execution, we will get a json with the payload being passed and the potability probability.
+
+The file after executing will respond the following:
+![image](https://github.com/Nireplag/water_potability/assets/70478646/8a7779e9-335e-46f0-b0b0-371caa3f9c67)
+
+
 

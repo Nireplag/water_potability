@@ -36,9 +36,10 @@ Plase fork the project and create a local clone of the project locally using:
 
 ### Start pipenv environent
 
-The files Pipfile and Pipfile.lock conatin the dependencies to execute the code without issues, therefore it is recomended to  start the virtual environment as following:
+The files Pipfile and Pipfile.lock conatin the dependencies to execute the code without issues, therefore it is recomended to install and start the virtual environment as following:
 
 - ``` pip install pipenv ``` in case you do not already have if
+- ``` pipenv install ```
 - From within the directory that have the Pipfile and Pipfile.lock execute the following command in prompt ``` pipenv shell```
 
 ### Create model.bin, no need to be executed
